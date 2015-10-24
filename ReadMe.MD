@@ -9,8 +9,10 @@ Specify root if necessary.  Upload "sapphire.php" to your server.
 
 
 Functions in the most recent copy include:
-
-fib($numberofterms,$groups,$inputarray) : Returns a Fibonacci sequence with a specified number of terms.  $groups indicates the amount of past terms aggregated to create the next term.  For instance if $groups was equivalent to 3:
+```
+sap_fib($numberofterms,$groups,$inputarray)
+```
+Returns a Fibonacci sequence with a specified number of terms.  $groups indicates the amount of past terms aggregated to create the next term.  For instance if $groups was equivalent to 3:
 
 1,3,4 … => 8 => 15 etc.
 
@@ -18,22 +20,52 @@ The $inputarray must be an array where the number of terms in it is equivalent t
 
 If $groups and $inputarray are left blank, fib() will return the number of terms of the original Fibonacci sequence.
 
-pfib($numberofterms,$groups,$inputarray) : Prints the Fibonacci sequence as specified before while separated with commas.
+```
+sap_pfib($numberofterms,$groups,$inputarray)
+```
+Prints the Fibonacci sequence as specified before while separated with commas.
 
-pnocommafib($numberofterms,$groups,$inputarray) : Prints the Fibonacci sequence as specified without commas.
+```
+sap_pnocommafib($numberofterms,$groups,$inputarray)
+```
+Prints the Fibonacci sequence as specified without commas.
 
-mulfib($numberofterms,$groups,$inputarray) : Returns an array with the similar rule as the Fibonacci sequence, except using multiplication as the factor of change opposed to addition.  For instance mulfib(5,2,array(1,2)) will return an array with the values 1,2,2,4,8
+```
+sap_mulfib($numberofterms,$groups,$inputarray)
+```
+Returns an array with the similar rule as the Fibonacci sequence, except using multiplication as the factor of change opposed to addition.  For instance mulfib(5,2,array(1,2)) will return an array with the values 1,2,2,4,8
 
-pmulfib($numberofterms,$groups,$inputarray) : Same as mulfib() except it prints the sequence with commas.
+```
+sap_pmulfib($numberofterms,$groups,$inputarray)
+```
+Same as mulfib() except it prints the sequence with commas.
 
-pnocommamulfib($numberofterms,$groups,$inputarray) : Same as pmulfib but without commas.
+```
+sap_pnocommamulfib($numberofterms,$groups,$inputarray)
+```
+Same as pmulfib but without commas.
 
-lucas($numberofterms) : Returns an array of a specified number of terms from the Lucas sequence.
+```
+sap_lucas($numberofterms)
+```
+Returns an array of a specified number of terms from the Lucas sequence.
 
-plucas($numberofterms) : Prints a specified number of terms from the Lucas sequence separated by commas.
+```
+sap_plucas($numberofterms)
+```
+Prints a specified number of terms from the Lucas sequence separated by commas.
 
-pnocommalucas($numberofterms) : Prints a specified number of terms from the Lucas sequence without commas.
+```
+sap_pnocommalucas($numberofterms)
+```
+Prints a specified number of terms from the Lucas sequence without commas.
 
-lsystem($iterations,$string,$array) :  Returns a Lindenmayer System based on the iteration given.  $string is the original start of the function and $array must model the start and end of different sets.  For instance, if A => AB and B => A, then there must be an array that states: array (A => AB, B => A)
+```
+sap_lsystem($iterations,$string,$array)
+```
+Returns a Lindenmayer System based on the iteration given.  $string is the original start of the function and $array must model the start and end of different sets.  For instance, if A => AB and B => A, then there must be an array that states: array (A => AB, B => A)
 
-plsystem($iterations,$string,$array) :  Prints a Lindenmayer System based on the iteration given and same parameters as before.
+```
+sap_plsystem($iterations,$string,$array)
+```
+Prints a Lindenmayer System based on the iteration given and same parameters as before.

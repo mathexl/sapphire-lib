@@ -1,7 +1,7 @@
-<?php 
+<?php
 /*
  * Sapphire PHP Library v1.0.1
- * http://sapphire-lib.com/  
+ * http://sapphire-lib.com/
  * Created by Mathew Pregasen
  * Peacock Logo created by Mathew Pregasen, free use under Creative Commons with Attribution
  * Sapphire is free and cannot be resold and is released under the MIT license
@@ -12,13 +12,13 @@
 
 
 
-function fib($numberofterms, $groups,$inputarray) 
+function sap_fib($numberofterms, $groups,$inputarray)
 {
 
 $output = array();
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -26,10 +26,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -42,10 +42,10 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 0;
 	while($primer + 1  <= $numberin)
@@ -60,38 +60,38 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	$output[] = $inputarray[$primer]; 
+	$output[] = $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
-	
+
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 0;
 	$nextterm = 0;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 	return $output;
 }
-function pfib($numberofterms,$groups,$inputarray) 
+function sap_pfib($numberofterms,$groups,$inputarray)
 {
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -99,10 +99,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -115,15 +115,15 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 0;
 	while($primer + 1  <= $numberin)
 	{
-	print $inputarray[$primer] . ", "; 
+	print $inputarray[$primer] . ", ";
 	$firstnew = $inputarray[$primer] + $firstnew;
     $primer = $primer + 1;
 	}
@@ -133,37 +133,37 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	print $inputarray[$primer]; 
+	print $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
 	print ", ";
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 0;
 	$nextterm = 0;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 }
-function pnocommafib($numberofterms,$groups,$inputarray) 
+function sap_pnocommafib($numberofterms,$groups,$inputarray)
 {
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -171,10 +171,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -187,15 +187,15 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 0;
 	while($primer + 1  <= $numberin)
 	{
-	print $inputarray[$primer] . " "; 
+	print $inputarray[$primer] . " ";
 	$firstnew = $inputarray[$primer] + $firstnew;
     $primer = $primer + 1;
 	}
@@ -205,46 +205,46 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	print $inputarray[$primer]; 
+	print $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
 	print " ";
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 0;
 	$nextterm = 0;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 }
 
 
 
-//END Basic Finonacci. 
+//END Basic Finonacci.
 /*
 Multiply Fibonacci
 */
-function mulfib($numberofterms, $groups,$inputarray) 
+function sap_mulfib($numberofterms, $groups,$inputarray)
 {
 
 $output = array();
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -252,10 +252,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -268,10 +268,10 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 1;
 	while($primer + 1  <= $numberin)
@@ -286,38 +286,38 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	$output[] = $inputarray[$primer]; 
+	$output[] = $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
-	
+
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 1;
 	$nextterm = 1;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] * $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] * $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 	return $output;
 }
-function pmulfib($numberofterms,$groups,$inputarray) 
+function sap_pmulfib($numberofterms,$groups,$inputarray)
 {
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -325,10 +325,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -341,15 +341,15 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 1;
 	while($primer + 1  <= $numberin)
 	{
-	print $inputarray[$primer] . ", "; 
+	print $inputarray[$primer] . ", ";
 	$firstnew = $inputarray[$primer] * $firstnew;
     $primer = $primer + 1;
 	}
@@ -359,37 +359,37 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	print $inputarray[$primer]; 
+	print $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
 	print ", ";
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 1;
 	$nextterm = 1;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] * $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] * $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 }
-function pnocommamulfib($numberofterms,$groups,$inputarray) 
+function sap_pnocommamulfib($numberofterms,$groups,$inputarray)
 {
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -397,10 +397,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -413,15 +413,15 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 1;
 	while($primer + 1  <= $numberin)
 	{
-	print $inputarray[$primer] . " "; 
+	print $inputarray[$primer] . " ";
 	$firstnew = $inputarray[$primer] * $firstnew;
     $primer = $primer + 1;
 	}
@@ -431,25 +431,25 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	print $inputarray[$primer]; 
+	print $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
 	print " ";
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 1;
 	$nextterm = 1;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] * $nextterm; 
+	$nextterm = $inputarray[$newprimer+1] * $nextterm;
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
@@ -457,17 +457,17 @@ else
 	}
 }
 
-// End of Multiply Fibonacci Sequence. 
-// Beginning of Lucas Sequence 
+// End of Multiply Fibonacci Sequence.
+// Beginning of Lucas Sequence
 
-function lucas($numberofterms) 
+function sap_lucas($numberofterms)
 {
 $groups = 2;
 $inputarray = array(2,1);
 $output = array();
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -475,10 +475,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -491,10 +491,10 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 0;
 	while($primer + 1  <= $numberin)
@@ -509,40 +509,40 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	$output[] = $inputarray[$primer]; 
+	$output[] = $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
-	
+
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 0;
 	$nextterm = 0;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 	return $output;
 }
-function plucas($numberofterms) 
+function sap_plucas($numberofterms)
 {
 $groups = 2;
 $inputarray = array(2,1);
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -550,10 +550,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -566,15 +566,15 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 0;
 	while($primer + 1  <= $numberin)
 	{
-	print $inputarray[$primer] . ", "; 
+	print $inputarray[$primer] . ", ";
 	$firstnew = $inputarray[$primer] + $firstnew;
     $primer = $primer + 1;
 	}
@@ -584,39 +584,39 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	print $inputarray[$primer]; 
+	print $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
 	print ", ";
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 0;
 	$nextterm = 0;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 }
-function pnocommalucas($numberofterms) 
+function sap_pnocommalucas($numberofterms)
 {
 $groups = 2;
 $inputarray = array(2,1);
 $offset = $offset + 1;
 $numberofterms = $numberofterms - 1;
-$endstring = ""; 
+$endstring = "";
 $count = count($inputarray);
 if ($count != $groups and $groups != "" and $inputarray != "")
 {
@@ -624,10 +624,10 @@ print "Error: Group size must equal the number of entities in the array.";
 }
 else
 	{
-	
+
 	if($inputarray == "")
 	{
-	
+
 	$inputarray = array(0,1);
 	$groups = 2;
 	}
@@ -640,15 +640,15 @@ else
 	{
 	print "Error: Cannot create sequence if number of terms wanted is less than the number of input values.";
 	}
-	
+
 	else
 	{
-	$numberin = count($inputarray); 
+	$numberin = count($inputarray);
 	$primer = 0;
 	$firstnew = 0;
 	while($primer + 1  <= $numberin)
 	{
-	print $inputarray[$primer] . " "; 
+	print $inputarray[$primer] . " ";
 	$firstnew = $inputarray[$primer] + $firstnew;
     $primer = $primer + 1;
 	}
@@ -658,39 +658,39 @@ else
 	$firstnew = 0;
 	if($primer >= $offset)
 	{
-	print $inputarray[$primer]; 
+	print $inputarray[$primer];
 	}
 	if($primer + 1 != $numberofterms +  $offset){
 	if($primer >= $offset)
 	{
 	print " ";
 	}
-	} 
-	
+	}
+
 	$newprimer = $primer - $numberin;
 	$newcount = 0;
 	$nextterm = 0;
 	while($newcount <= $numberin)
 	{
-	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer 
+	$nextterm = $inputarray[$newprimer+1] + $nextterm;//Newprimer + 1 vs Newprimer
     $newprimer = $newprimer + 1;
 	$newcount = $newcount + 1;
 	}
-	
+
 	$inputarray[] = $nextterm;
 	$primer = $primer + 1;
 	}
-	
+
 	}
 	}
 }
 
 
 
-// End of Lucas Sequence 
+// End of Lucas Sequence
 // Start of L-System
 
-function plsystem($iterations,$string,$array)
+function sap_plsystem($iterations,$string,$array)
 {
 $counter = 1;
 
@@ -703,34 +703,34 @@ while($counter < $iterations)
  {
  while ($endvalue = current($array) and $break == false) {
     $startvalue = key($array);
-	
+
 	if($megaarray[$macounter] == $startvalue)
 	{
-	
+
 	$megaarray[$macounter] = $endvalue;
 	$break == true;
-	
+
 	}
 	else
 {
 next($array);
-}    
+}
 	}
 	reset($array);
 	$break = false;
-	
-	
+
+
  $macounter = $macounter + 1;
  }
  $string = implode($megaarray);
- 
+
  $counter = $counter + 1;
- 
+
 }
-print $string;   
+print $string;
 }
 
-function lsystem($iterations,$string,$array)
+function sap_lsystem($iterations,$string,$array)
 {
 $counter = 1;
 while($counter < $iterations)
@@ -742,35 +742,35 @@ while($counter < $iterations)
  {
  while ($endvalue = current($array) and $break == false) {
     $startvalue = key($array);
-	
+
 	if($megaarray[$macounter] == $startvalue)
 	{
-	
+
 	$megaarray[$macounter] = $endvalue;
 	$break == true;
-	
+
 	}
 	else
 {
 next($array);
-}    
+}
 	}
 	reset($array);
 	$break = false;
-	
-	
+
+
  $macounter = $macounter + 1;
  }
  $string = implode($megaarray);
- 
+
  $counter = $counter + 1;
- 
+
 }
-return $string;   
+return $string;
 }
-//Evaluate the bottom. 
-/* 
-function lookandsay($integer)
+//Evaluate the bottom.
+/*
+function sap_lookandsay($integer)
 {
 $integer = $integer . " ";
 $newstring = "";
@@ -793,17 +793,17 @@ $digitrunner = $digitrunner + 1;
 print $newstring;
 }*/
 
-function sapphire()
+function sap_sapphire()
 {
 print "Sapphire functions displayed below.<br>
-	fib(\$numberofterms, \$groups,\$inputarray):returns sequence as an array.  Groups is defined as number of values added per iteration.
-<br> 	pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.	
-<br> 	pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.	
-<br>    pnocommafib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a simple string.  Groups is defined as number of values added per iteration.		
-<br>	fib(\$numberofterms, \$groups,\$inputarray):returns multiplicative sequence as an array.  Groups is defined as number of values added per iteration.
-<br> 	pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.	
-<br> 	pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.	
-<br>    pnocommafib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a simple string.  Groups is defined as number of values added per iteration.		
+	sap_fib(\$numberofterms, \$groups,\$inputarray):returns sequence as an array.  Groups is defined as number of values added per iteration.
+<br> 	sap_pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.
+<br> 	sap_pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.
+<br>    sap_pnocommafib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a simple string.  Groups is defined as number of values added per iteration.
+<br>	sap_fib(\$numberofterms, \$groups,\$inputarray):returns multiplicative sequence as an array.  Groups is defined as number of values added per iteration.
+<br> 	sap_pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.
+<br> 	sap_pfib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a string seperated by commas.  Groups is defined as number of values added per iteration.
+<br>    sap_pnocommafib(\$numberofterms, \$groups,\$inputarray):Prints sequence in a simple string.  Groups is defined as number of values added per iteration.
 	";
 }
 
